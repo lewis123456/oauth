@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.lewis'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+List spring = [
+        'org.springframework.boot:spring-boot-starter-web:1.4.7.RELEASE'
+]
+
+List lombok = [
+        'org.projectlombok:lombok:1.16.18'
+]
+
+dependencies {
+    compile spring, lombok
+    testCompile spring, lombok
+}
